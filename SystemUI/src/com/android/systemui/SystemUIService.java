@@ -25,11 +25,15 @@ import android.view.View;
 import android.content.pm.PackageManager;           //Added
 import android.content.ActivityNotFoundException;   //Added
 import android.content.Context;                     //Added
+// import com.android.systemui.statusbar.phone.SettingsPanelView;  //Added
+// import com.android.systemui.statusbar.phone.StatusBarWindowView;  //Added
 
 
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
 import java.util.HashMap;
+
+
 
 public class SystemUIService extends Service {
     private static final String TAG = "SystemUIService";
@@ -122,6 +126,11 @@ public class SystemUIService extends Service {
         Intent it = new Intent("com.android.SystemUI.showallapps");
         sendBroadcast(it);
 
+        
+        // SettingsPanelView mSettingsPanel;
+        // StatusBarWindowView mStatusBarWindow;
+        // mSettingsPanel = (SettingsPanelView) mStatusBarWindow.findViewById(R.id.settings_panel);
+        // mSettingsPanel.expand();
 
         
     }

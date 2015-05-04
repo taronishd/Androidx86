@@ -69,7 +69,7 @@
                 android:layout_width="@dimen/navigation_key_width"
                 android:layout_height="match_parent"
                 android:scaleType="center"
-                android:src="@drawable/android_launcher_icon"
+                android:src="@drawable/android_launcher_icon2"
                 android:layout_weight="0"
                 android:onClick="onClickZlaunch"
                 />
@@ -243,7 +243,7 @@
             <com.android.systemui.statusbar.policy.KeyButtonView android:id="@+id/zlaunch"
                 android:layout_width="80dp"
                 android:layout_height="match_parent"
-                android:src="@drawable/android_launcher_icon"
+                android:src="@drawable/android_launcher_icon2"
                 android:layout_weight="0"
                 android:onClick="onClickZlaunch"
                 />

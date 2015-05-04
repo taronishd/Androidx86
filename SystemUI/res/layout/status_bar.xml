@@ -23,7 +23,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:systemui="http://schemas.android.com/apk/res/com.android.systemui"
     android:id="@+id/status_bar"
-    android:background="@drawable/system_bar_background"
+    android:background="@drawable/system_bar_background2"
     android:orientation="vertical"
     android:focusable="true"
     android:descendantFocusability="afterDescendants"
@@ -74,13 +74,15 @@
         <LinearLayout android:id="@+id/system_icon_area"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:visibility="gone">
 
             <LinearLayout android:id="@+id/statusIcons"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
-                android:orientation="horizontal"/>    
+                android:orientation="horizontal"
+                android:visibility="gone"/>    
     
             <LinearLayout
                 android:id="@+id/signal_battery_cluster"
@@ -89,6 +91,7 @@
                 android:paddingStart="2dp"
                 android:orientation="horizontal"
                 android:gravity="center"
+                android:visibility="gone"
                 >
                 <include layout="@layout/signal_cluster_view" 
                     android:id="@+id/signal_cluster"
@@ -102,6 +105,7 @@
                     android:layout_width="10.5dp"
                     android:layout_marginBottom="0.33dp"
                     android:layout_marginStart="4dip"
+                    android:visibility="gone"
                     />
             </LinearLayout>
     
@@ -113,6 +117,7 @@
                 android:singleLine="true"
                 android:paddingStart="6dip"
                 android:gravity="center_vertical|start"
+                android:visibility="gone"
                 />
         </LinearLayout>
     </LinearLayout>

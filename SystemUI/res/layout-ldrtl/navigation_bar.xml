@@ -53,7 +53,7 @@
                 android:layout_width="@dimen/navigation_key_width"
                 android:layout_height="match_parent"
                 android:scaleType="center"
-                android:src="@drawable/android_launcher_icon"
+                android:src="@drawable/android_launcher_icon2"
                 android:layout_weight="0"
                 />
 
@@ -213,7 +213,7 @@
                 android:layout_width="80dp"
                 android:layout_height="match_parent"
                 android:scaleType="center"
-                android:src="@drawable/android_launcher_icon"
+                android:src="@drawable/android_launcher_icon2"
                 android:layout_weight="0"
                 />
 

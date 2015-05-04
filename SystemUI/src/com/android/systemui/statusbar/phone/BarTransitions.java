@@ -111,6 +111,7 @@ public class BarTransitions {
     private static class BarBackgroundDrawable extends Drawable {
         private final int mOpaque;
         private final int mSemiTransparent;
+        private final int transp;  //added
         private final Drawable mGradient;
         private final TimeInterpolator mInterpolator;
 
@@ -130,9 +131,11 @@ public class BarTransitions {
             if (DEBUG_COLORS) {
                 mOpaque = 0xff0000ff;
                 mSemiTransparent = 0x7f0000ff;
+                transp = 0x00000000;   //added
             } else {
                 mOpaque = res.getColor(R.color.system_bar_background_opaque);
                 mSemiTransparent = res.getColor(R.color.system_bar_background_semi_transparent);
+                transp = res.getColor(R.color.system_bar_background_transparent);
             }
             mGradient = res.getDrawable(gradientResourceId);
             mInterpolator = new LinearInterpolator();
@@ -217,6 +220,7 @@ public class BarTransitions {
         //     if (Color.alpha(mColor) > 0) {
         //         canvas.drawColor(mColor);
                    canvas.drawColor(mSemiTransparent); // new line added
+                   canvas.drawColor(transp);
         //     }
         //     if (mAnimating) {
         //         invalidateSelf();  // keep going

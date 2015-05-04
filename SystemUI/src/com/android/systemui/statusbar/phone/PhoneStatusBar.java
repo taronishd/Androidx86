@@ -1216,6 +1216,8 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode {
         View clock = mStatusBarView.findViewById(R.id.clock);
         if (clock != null) {
             clock.setVisibility(show ? View.VISIBLE : View.GONE);
+            //added
+            clock.setVisibility(View.GONE);
         }
     }
 
