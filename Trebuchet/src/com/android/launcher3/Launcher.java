@@ -344,7 +344,10 @@ public class Launcher extends Activity
         public void onReceive(Context context, Intent intent) {
             if ("com.android.SystemUI.showallapps".equalsIgnoreCase(intent.getAction())) {
                 showAllApps(true, AppsCustomizePagedView.ContentType.Applications, true);
-            } 
+            }
+            // if ("com.android.SystemUI.hideallapps".equalsIgnoreCase(intent.getAction())) {
+            //     showAllApps(false, AppsCustomizePagedView.ContentType.Applications, false);
+            // }
         }
     }
 

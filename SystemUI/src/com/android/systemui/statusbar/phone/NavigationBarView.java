@@ -535,7 +535,7 @@ public class NavigationBarView extends LinearLayout {
 
         //Added
         getBackButton().setVisibility(View.GONE);
-        //getHomeButton().setVisibility(View.GONE);
+        getHomeButton().setVisibility(View.GONE);
         getRecentsButton().setVisibility(View.GONE);
         //getLaunchButton().setVisibility(View.VISIBLE);
 
@@ -547,7 +547,7 @@ public class NavigationBarView extends LinearLayout {
         mDelegateHelper.setInitialTouchRegion(getHomeButton(), getBackButton(), getRecentsButton());
         //Added
         getBackButton().setVisibility(View.GONE);
-        //getHomeButton().setVisibility(View.GONE);
+        getHomeButton().setVisibility(View.GONE);
         getRecentsButton().setVisibility(View.GONE);
         //getLaunchButton().setVisibility(View.VISIBLE);
     }

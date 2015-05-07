@@ -25,6 +25,7 @@ import android.view.View;
 import android.content.pm.PackageManager;           //Added
 import android.content.ActivityNotFoundException;   //Added
 import android.content.Context;                     //Added
+import android.os.UserHandle;                       //Added
 // import com.android.systemui.statusbar.phone.SettingsPanelView;  //Added
 // import com.android.systemui.statusbar.phone.StatusBarWindowView;  //Added
 
@@ -37,7 +38,7 @@ import java.util.HashMap;
 
 public class SystemUIService extends Service {
     private static final String TAG = "SystemUIService";
-
+    private static boolean openAppToggle = false;
     /**
      * The classes of the stuff to start.
      */
@@ -123,10 +124,21 @@ public class SystemUIService extends Service {
 
         
         // TODO send to just launcher
-        Intent it = new Intent("com.android.SystemUI.showallapps");
-        sendBroadcast(it);
-
+        openAppToggle = !openAppToggle;
+        if (openAppToggle){
+            Intent it = new Intent("com.android.SystemUI.showallapps");
+            sendBroadcast(it);
+        }
+        else {
+            Intent homeIntent = new Intent(Intent.ACTION_MAIN, null);
+            homeIntent.addCategory(Intent.CATEGORY_HOME);
+            homeIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK
+                    | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
+            startActivityAsUser(homeIntent, new UserHandle(UserHandle.USER_CURRENT));
+        }
         
+
+
         // SettingsPanelView mSettingsPanel;
         // StatusBarWindowView mStatusBarWindow;
         // mSettingsPanel = (SettingsPanelView) mStatusBarWindow.findViewById(R.id.settings_panel);
