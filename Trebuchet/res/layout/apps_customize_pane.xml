@@ -13,16 +13,21 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+
+
+
 <com.android.launcher3.AppsCustomizeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:launcher="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <FrameLayout
         android:id="@+id/apps_customize_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone">
+        android:visibility="gone"
+        android:layout_marginLeft="350dp">
+
         <com.android.launcher3.AppsCustomizePagedView
             android:id="@+id/apps_customize_pane_content"
             android:layout_width="match_parent"
@@ -34,12 +39,120 @@
             launcher:clingFocusedY="@integer/apps_customize_cling_focused_y"
             launcher:maxGap="@dimen/workspace_max_gap"
             launcher:pageIndicator="@+id/page_indicator" />
-        <include
+
+        <!-- <include
             android:id="@+id/page_indicator"
             layout="@layout/page_indicator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center_horizontal"
-            android:layout_marginBottom="@dimen/apps_customize_page_indicator_margin" />
+            android:layout_marginBottom="@dimen/apps_customize_page_indicator_margin" /> -->
+            <include
+              android:id="@+id/page_indicator"
+              layout="@layout/page_indicator"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="bottom|center_horizontal"
+              android:layout_marginBottom="50dp" />
     </FrameLayout>
+
+    <LinearLayout
+          android:id="@+id/new_settings_panel"
+          android:layout_width="350dp"
+          android:layout_height="match_parent"
+          android:background="@color/semi_trans"
+          android:orientation="horizontal"
+          android:layout_gravity="left">
+
+        <LinearLayout
+          android:id="@+id/button_area"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_marginTop="13dp"
+          android:layout_marginLeft="15dp"
+          android:layout_marginRight="15dp"
+          android:layout_marginBottom="100dp"
+          android:orientation="vertical">
+
+
+          <!-- <View
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="0"
+            android:visibility="invisible"/> -->
+
+          <Button
+            android:id="@+id/new_settings_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/gears"
+            android:text="@string/gears_text"
+            android:onClick="menuButtonClick"
+            />
+
+          <Button
+            android:id="@+id/new_brightness_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/the_sun"
+            android:text="@string/the_sun_text"
+            android:onClick="menuButtonClick"
+            />
+
+          <Button
+            android:id="@+id/new_battery_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/battery"
+            android:text="@string/battery_text"
+            android:onClick="menuButtonClick"
+            />
+
+          <Button
+            android:id="@+id/new_wifi_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/wifi"
+            android:text="@string/wifi_text"
+            android:onClick="menuButtonClick"
+            />
+
+          <Button
+            android:id="@+id/new_location_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/location"
+            android:text="@string/location_text"
+            android:onClick="menuButtonClick"
+            />
+
+          <Button
+            android:id="@+id/new_bluetooth_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/bluetooth"
+            android:text="@string/bluetooth_text"
+            android:onClick="menuButtonClick"
+            />
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom">
+
+            <Button
+              android:id="@+id/new_shutdown_button"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:drawableLeft="@drawable/selfdestruct"
+              android:text="@string/selfdestruct_text"
+              android:onClick="menuButtonClick"/>
+
+          </LinearLayout>
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+   
 </com.android.launcher3.AppsCustomizeLayout>

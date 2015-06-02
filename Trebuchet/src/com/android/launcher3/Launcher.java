@@ -527,7 +527,8 @@ public class Launcher extends Activity
         filter2.addAction("com.android.SystemUI.showallapps");
         registerReceiver(receiver, filter2);
 
-
+        // mSearchDropTargetBar.hideSearchBar(false);      //Added
+        // hideHotseat(false);                             //Added
     }
 
     protected void onUserLeaveHint() {
@@ -587,6 +588,9 @@ public class Launcher extends Activity
         if (mSearchDropTargetBar != null) {
             mSearchDropTargetBar.onSearchPackagesChanged(searchVisible, voiceVisible);
         }
+
+        // mSearchDropTargetBar.hideSearchBar(false);      //Added
+        // hideHotseat(false);                             //Added
     }
 
     private void checkForLocaleChange() {
@@ -636,6 +640,9 @@ public class Launcher extends Activity
                 }
             }.start();
         }
+
+        // mSearchDropTargetBar.hideSearchBar(false);      //Added
+        // hideHotseat(false);                             //Added
     }
 
     private static class LocaleConfiguration {
@@ -818,6 +825,9 @@ public class Launcher extends Activity
         // Exit spring loaded mode if necessary after cancelling the configuration of a widget
         exitSpringLoadedDragModeDelayed((resultCode != RESULT_CANCELED), delayExitSpringLoadedMode,
                 null);
+
+        // mSearchDropTargetBar.hideSearchBar(false);      //Added
+        // hideHotseat(false);                             //Added
     }
 
     private void completeTwoStageWidgetDrop(final int resultCode, final int appWidgetId) {
@@ -976,6 +986,9 @@ public class Launcher extends Activity
         mWorkspace.updateInteractionForState();
         mWorkspace.onResume();
         mAppsCustomizeContent.onResume();
+
+        // mSearchDropTargetBar.hideSearchBar(false);      //Added
+        // hideHotseat(false);                             //Added
     }
 
     @Override
@@ -1498,6 +1511,9 @@ public class Launcher extends Activity
             boolean show = shouldShowWeightWatcher();
             mWeightWatcher.setVisibility(show ? View.VISIBLE : View.GONE);
         }
+
+        // mSearchDropTargetBar.hideSearchBar(false);      //Added
+        // hideHotseat(false);                             //Added
     }
 
     /**
@@ -1625,6 +1641,9 @@ public class Launcher extends Activity
             mWorkspace.addInScreen(view, container, screenId, cellXY[0], cellXY[1], 1, 1,
                     isWorkspaceLocked());
         }
+
+        // mSearchDropTargetBar.hideSearchBar(false);      //Added
+        // hideHotseat(false);                             //Added
     }
 
     static int[] getSpanForWidget(Context context, ComponentName component, int minWidth,
@@ -2587,6 +2606,61 @@ public class Launcher extends Activity
         showAllApps(true, AppsCustomizePagedView.ContentType.Applications, true);
     }
 
+    /*********************** Added *********************/
+
+    public void menuButtonClick(View v) {
+        switch(v.getId()) {
+            case R.id.new_settings_button:
+            {
+                Intent it = new Intent("packages.apps.Trebuchet.menuButtonClick.settings");
+                sendBroadcast(it);
+                break;
+            }
+            case R.id.new_brightness_button:
+            {
+                Intent it = new Intent("packages.apps.Trebuchet.menuButtonClick.brightness");
+                sendBroadcast(it);
+                break;
+            }
+            case R.id.new_battery_button:
+            {
+                Intent it = new Intent("packages.apps.Trebuchet.menuButtonClick.battery");
+                sendBroadcast(it);
+                break;
+            }
+            case R.id.new_wifi_button:
+            {
+                Intent it = new Intent("packages.apps.Trebuchet.menuButtonClick.wifi");
+                sendBroadcast(it);
+                break;
+            }
+            case R.id.new_location_button:
+            {
+                Intent it = new Intent("packages.apps.Trebuchet.menuButtonClick.location");
+                sendBroadcast(it);
+                break;
+            }
+            case R.id.new_bluetooth_button:
+            {
+                Intent it = new Intent("packages.apps.Trebuchet.menuButtonClick.bluetooth");
+                sendBroadcast(it);
+                break;
+            }
+            case R.id.new_shutdown_button:
+            {
+                Intent it = new Intent("packages.apps.Trebuchet.menuButtonClick.shutdown");
+                sendBroadcast(it);
+                break;
+            }
+        }
+    }
+
+
+
+
+
+
+
     public void onTouchDownAllAppsButton(View v) {
         // Provide the same haptic feedback that the system offers for virtual keys.
         v.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
@@ -3281,6 +3355,9 @@ public class Launcher extends Activity
             dispatchOnLauncherTransitionStart(toView, animated, false);
             dispatchOnLauncherTransitionEnd(toView, animated, false);
         }
+
+        // mSearchDropTargetBar.hideSearchBar(false);      //Added
+        // hideHotseat(false);                             //Added
     }
 
     /**
@@ -3317,7 +3394,7 @@ public class Launcher extends Activity
         }
 
         setPivotsForZoom(fromView, scaleFactor);
-        showHotseat(animated);
+        //showHotseat(animated);
         if (animated) {
             final LauncherViewPropertyAnimator scaleAnim =
                     new LauncherViewPropertyAnimator(fromView);
@@ -3375,6 +3452,8 @@ public class Launcher extends Activity
             dispatchOnLauncherTransitionStart(toView, animated, true);
             dispatchOnLauncherTransitionEnd(toView, animated, true);
         }
+        // mSearchDropTargetBar.hideSearchBar(false);      //Added
+        // hideHotseat(false);                             //Added
     }
 
     @Override
@@ -3405,7 +3484,7 @@ public class Launcher extends Activity
             // Show the search bar (only animate if we were showing the drop target bar in spring
             // loaded mode)
             if (mSearchDropTargetBar != null) {
-                mSearchDropTargetBar.showSearchBar(animated && wasInSpringLoadedMode);
+                //mSearchDropTargetBar.showSearchBar(animated && wasInSpringLoadedMode);
             }
 
             // Set focus to the AppsCustomize button
@@ -3426,6 +3505,10 @@ public class Launcher extends Activity
                 .sendAccessibilityEvent(AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED);
 
         onWorkspaceShown(animated);
+
+        // mSearchDropTargetBar.hideSearchBar(false);      //Added
+        // hideHotseat(false);                             //Added
+
     }
 
     void showOverviewMode(boolean animated) {
@@ -4689,6 +4772,7 @@ public class Launcher extends Activity
 
         // Fade in the search bar
         mSearchDropTargetBar.showSearchBar(true);
+
     }
     public void dismissFolderCling(View v) {
         Cling cling = (Cling) findViewById(R.id.folder_cling);

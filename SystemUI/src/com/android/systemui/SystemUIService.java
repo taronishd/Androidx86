@@ -25,7 +25,13 @@ import android.view.View;
 import android.content.pm.PackageManager;           //Added
 import android.content.ActivityNotFoundException;   //Added
 import android.content.Context;                     //Added
-import android.os.UserHandle;                       //Added
+import android.content.BroadcastReceiver;
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
+import android.content.DialogInterface;
+import android.view.WindowManager;
+import android.content.Context;
+
 // import com.android.systemui.statusbar.phone.SettingsPanelView;  //Added
 // import com.android.systemui.statusbar.phone.StatusBarWindowView;  //Added
 
@@ -38,7 +44,7 @@ import java.util.HashMap;
 
 public class SystemUIService extends Service {
     private static final String TAG = "SystemUIService";
-    private static boolean openAppToggle = false;
+
     /**
      * The classes of the stuff to start.
      */
@@ -111,6 +117,37 @@ public class SystemUIService extends Service {
     }
 
 
+
+
+    // public class ActionReceiver extends BroadcastReceiver {
+    //     @Override
+    //     public void onReceive(Context context, Intent intent) {
+    //         if ("packages.apps.Trebuchet.menuButtonClick.shutdown".equalsIgnoreCase(intent.getAction())) {
+    //             final AlertDialog dialog = new AlertDialog.Builder(context)
+    //                 .setTitle(com.android.internal.R.string.power_off)
+    //                 .setMessage(com.android.internal.R.string.shutdown_confirm_question)
+    //                 .setPositiveButton(com.android.internal.R.string.yes,
+    //                     new DialogInterface.OnClickListener() {
+    //                     public void onClick(DialogInterface dialog, int which) {
+    //                         // Send request to start ShutdownActivity
+    //                         Intent intent = new Intent(Intent.ACTION_REQUEST_SHUTDOWN);
+    //                         intent.putExtra(Intent.EXTRA_KEY_CONFIRM, false);
+    //                         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+    //                         context.startActivity(intent);
+    //                     }
+    //                 })
+    //                 .setNegativeButton(com.android.internal.R.string.no, null)
+    //                 .create();
+    //                 dialog.getWindow().setType(WindowManager.LayoutParams.TYPE_KEYGUARD_DIALOG);
+    //                 dialog.show();
+    //         }
+    //     }
+    // }
+
+
+
+
+
     public void onClickZlaunch (View v) {
         
         // Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.android.calculator2");
@@ -124,21 +161,10 @@ public class SystemUIService extends Service {
 
         
         // TODO send to just launcher
-        openAppToggle = !openAppToggle;
-        if (openAppToggle){
-            Intent it = new Intent("com.android.SystemUI.showallapps");
-            sendBroadcast(it);
-        }
-        else {
-            Intent homeIntent = new Intent(Intent.ACTION_MAIN, null);
-            homeIntent.addCategory(Intent.CATEGORY_HOME);
-            homeIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK
-                    | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
-            startActivityAsUser(homeIntent, new UserHandle(UserHandle.USER_CURRENT));
-        }
+        Intent it = new Intent("com.android.SystemUI.showallapps");
+        sendBroadcast(it);
+
         
-
-
         // SettingsPanelView mSettingsPanel;
         // StatusBarWindowView mStatusBarWindow;
         // mSettingsPanel = (SettingsPanelView) mStatusBarWindow.findViewById(R.id.settings_panel);

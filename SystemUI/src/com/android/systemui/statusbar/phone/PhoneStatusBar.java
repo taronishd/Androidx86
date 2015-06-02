@@ -82,6 +82,14 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import android.content.pm.PackageManager;           //Added
+import android.content.ActivityNotFoundException;   //Added
+import android.content.Context;                     //Added
+import android.os.UserHandle;                       //Added
+import com.android.systemui.statusbar.phone.SettingsPanelView;      //Added
+import com.android.systemui.statusbar.phone.StatusBarWindowView;    //Added
+import com.android.systemui.recent.TaskDescription;    //Added
+
 import com.android.internal.statusbar.StatusBarIcon;
 import com.android.systemui.DemoMode;
 import com.android.systemui.EventLogTags;
@@ -213,6 +221,9 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode {
     View mDateTimeView;
     View mClearButton;
     ImageView mSettingsButton, mNotificationButton;
+    ImageView mLaunchButton;  //Added
+
+    private static boolean openQSToggle = false;
 
     // carrier/wifi label
     private TextView mCarrierLabel;
@@ -442,6 +453,8 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode {
                         checkUserAutohide(v, event);
                         return false;
                     }});
+
+                mNavigationBarView.updateTaskDescriptions();
             }
         } catch (RemoteException ex) {
             // no window manager? good luck with that
@@ -482,8 +495,11 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode {
         }
 
         mSettingsButton = (ImageView) mStatusBarWindow.findViewById(R.id.settings_button);
+        //Added
+        mLaunchButton = (ImageView) mNavigationBarView.findViewById(R.id.zlaunch);
         if (mSettingsButton != null) {
-            mSettingsButton.setOnClickListener(mSettingsButtonListener);
+            mLaunchButton.setOnClickListener(mSettingsButtonListener);
+            //mSettingsButton.setOnClickListener(mSettingsButtonListener); Added -> removed
             if (mHasSettingsPanel) {
                 if (mStatusBarView.hasFullWidthNotifications()) {
                     // the settings panel is hiding behind this button
@@ -745,6 +761,9 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode {
         public void onClick(View v) {
             awakenDreams();
             toggleRecentApps();
+
+            //Added
+            mNavigationBarView.updateTaskDescriptions();
         }
     };
 
@@ -1520,7 +1539,7 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode {
             return ;
         }
 
-        mNotificationPanel.expand();
+        //mNotificationPanel.expand();
         if (mHasFlipSettings && mScrollView.getVisibility() != View.VISIBLE) {
             flipToNotifications();
         }
@@ -1579,7 +1598,7 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode {
         if (!mUserSetup) return;
 
         if (mHasFlipSettings) {
-            mNotificationPanel.expand();
+            //mNotificationPanel.expand();
             if (mFlipSettingsView.getVisibility() != View.VISIBLE) {
                 flipToSettings();
             }
@@ -2421,13 +2440,30 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode {
         animateCollapsePanels();
     }
 
+    //Added: modified this listener to do Launcher operations
     private View.OnClickListener mSettingsButtonListener = new View.OnClickListener() {
         public void onClick(View v) {
-            if (mHasSettingsPanel) {
-                animateExpandSettingsPanel();
-            } else {
-                startActivityDismissingKeyguard(
-                        new Intent(android.provider.Settings.ACTION_SETTINGS), true);
+            Intent it = new Intent("com.android.SystemUI.showallapps");
+            mContext.sendBroadcast(it);
+            openQSToggle = !openQSToggle;
+
+            if(openQSToggle){
+                // if (mHasSettingsPanel) {
+                //     animateExpandSettingsPanel();
+                // } else {
+                //     startActivityDismissingKeyguard(
+                //             new Intent(android.provider.Settings.ACTION_SETTINGS), true);
+                // }    
+            }
+
+            else{
+                //animateCollapseQuickSettings();
+
+                Intent homeIntent = new Intent(Intent.ACTION_MAIN, null);
+                homeIntent.addCategory(Intent.CATEGORY_HOME);
+                homeIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK
+                        | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
+                mContext.startActivityAsUser(homeIntent, new UserHandle(UserHandle.USER_CURRENT));
             }
         }
     };
@@ -2441,7 +2477,7 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode {
 
     private View.OnClickListener mNotificationButtonListener = new View.OnClickListener() {
         public void onClick(View v) {
-            animateExpandNotificationsPanel();
+            //animateExpandNotificationsPanel();
         }
     };
 

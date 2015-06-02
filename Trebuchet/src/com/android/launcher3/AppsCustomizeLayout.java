@@ -47,6 +47,7 @@ public class AppsCustomizeLayout extends FrameLayout implements LauncherTransiti
 
     @Override
     public void setInsets(Rect insets) {
+        /*
         mInsets.set(insets);
         FrameLayout.LayoutParams flp = (LayoutParams) mContent.getLayoutParams();
         flp.topMargin = insets.top;
@@ -54,6 +55,7 @@ public class AppsCustomizeLayout extends FrameLayout implements LauncherTransiti
         flp.leftMargin = insets.left;
         flp.rightMargin = insets.right;
         mContent.setLayoutParams(flp);
+        */
     }
 
     /**

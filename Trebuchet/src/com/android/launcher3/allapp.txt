@@ -1,0 +1,40 @@
+./AppsCustomizePagedView.java:    public static boolean DISABLE_ALL_APPS = false;
+./AppsCustomizePagedView.java:            if ((DISABLE_ALL_APPS || !mFilteredApps.isEmpty()) && !mFilteredWidgets.isEmpty()) {
+./AppsCustomizePagedView.java:        if (!DISABLE_ALL_APPS) {
+./AppsCustomizePagedView.java:        if (!DISABLE_ALL_APPS) {
+./AppsCustomizePagedView.java:        if (!DISABLE_ALL_APPS) {
+./AppsCustomizePagedView.java:        if (!DISABLE_ALL_APPS) {
+./Cling.java:    static final String ALL_APPS_CLING_DISMISSED_KEY = "cling_gel.all_apps.dismissed";
+./Cling.java:    private static String ALL_APPS = "all_apps";
+./Cling.java:                mDrawIdentifier.equals(ALL_APPS)) {
+./Cling.java:                || mDrawIdentifier.equals(ALL_APPS));
+./Cling.java:        } else if (mDrawIdentifier.equals(ALL_APPS)) {
+./Cling.java:                    mDrawIdentifier.equals(ALL_APPS)) {
+./Cling.java:                    mDrawIdentifier.equals(ALL_APPS)) {
+./DeleteDropTarget.java:            if (!AppsCustomizePagedView.DISABLE_ALL_APPS &&
+./DeleteDropTarget.java:            if (!AppsCustomizePagedView.DISABLE_ALL_APPS &&
+./DeleteDropTarget.java:                if (AppsCustomizePagedView.DISABLE_ALL_APPS) {
+./DeleteDropTarget.java:        boolean useUninstallLabel = !AppsCustomizePagedView.DISABLE_ALL_APPS &&
+./DeleteDropTarget.java:        if (AppsCustomizePagedView.DISABLE_ALL_APPS && isWorkspaceOrFolderApplication(d)) {
+./DynamicGrid.java:        if (!AppsCustomizePagedView.DISABLE_ALL_APPS && hs % 2 == 0) {
+./DynamicGrid.java:        boolean hasAA = !AppsCustomizePagedView.DISABLE_ALL_APPS;
+./Hotseat.java:        if (AppsCustomizePagedView.DISABLE_ALL_APPS) {
+./Hotseat.java:        if (AppsCustomizePagedView.DISABLE_ALL_APPS) {
+./Launcher.java:            Drawable d = getResources().getDrawable(R.drawable.all_apps_button_icon);
+./Launcher.java:                !mSharedPrefs.getBoolean(Cling.ALL_APPS_CLING_DISMISSED_KEY, false) &&
+./Launcher.java:            Cling cling = (Cling) findViewById(R.id.all_apps_cling);
+./Launcher.java:            initCling(R.id.all_apps_cling, 0, true, true);
+./Launcher.java:            removeCling(R.id.all_apps_cling);
+./Launcher.java:        if (!AppsCustomizePagedView.DISABLE_ALL_APPS) {
+./Launcher.java:            text.add(getString(R.string.all_apps_button_label));
+./Launcher.java:            text.add(getString(R.string.all_apps_home_button_label));
+./Launcher.java:        if (!AppsCustomizePagedView.DISABLE_ALL_APPS &&
+./Launcher.java:        if (AppsCustomizePagedView.DISABLE_ALL_APPS) {
+./Launcher.java:        if (!AppsCustomizePagedView.DISABLE_ALL_APPS &&
+./Launcher.java:        if (!AppsCustomizePagedView.DISABLE_ALL_APPS &&
+./Launcher.java:        if (!AppsCustomizePagedView.DISABLE_ALL_APPS &&
+./Launcher.java:        Cling cling = (Cling) findViewById(R.id.all_apps_cling);
+./Launcher.java:        dismissCling(cling, null, Cling.ALL_APPS_CLING_DISMISSED_KEY,
+./LauncherModel.java:        allAppsShortcut.title = mApp.getContext().getResources().getString(R.string.all_apps_button_label);
+./LauncherModel.java:            if (AppsCustomizePagedView.DISABLE_ALL_APPS) {
+./LauncherModel.java:                if (!AppsCustomizePagedView.DISABLE_ALL_APPS) {

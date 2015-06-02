@@ -111,7 +111,7 @@
         launcher:spanY="2" />
 
     <!-- Hotseat -->
-    <favorite
+<!--     <favorite
         launcher:packageName="com.google.android.talk"
         launcher:className="com.google.android.talk.SigningInActivity"
         launcher:container="-101"
@@ -166,6 +166,6 @@
         launcher:container="-101"
         launcher:screen="1"
         launcher:x="1"
-        launcher:y="0" />
+        launcher:y="0" /> -->
 
 </favorites>

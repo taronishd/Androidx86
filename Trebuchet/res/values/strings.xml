@@ -289,9 +289,17 @@ s -->
 
     <!-- Strings for the customization mode -->
     <!-- Text for widget add button -->
-    <string name="widget_button_text">Widgets</string>
+    <string name="widget_button_text">Widgets2</string>
     <!-- Text for wallpaper change button -->
-    <string name="wallpaper_button_text">Wallpapers</string>
+    <string name="wallpaper_button_text">Wallpapers2</string>
     <!-- Text for settings button -->
-    <string name="settings_button_text">Settings</string>
+    <string name="settings_button_text">Settings3</string>
+
+    <string name="the_sun_text">Brightness</string>
+    <string name="selfdestruct_text">Shut Down</string>
+    <string name="gears_text">Settings</string>
+    <string name="wifi_text">Wifi</string>
+    <string name="battery_text">Battery</string>
+    <string name="location_text">Location</string>
+    <string name="bluetooth_text">Bluetooth</string>
 </resources>

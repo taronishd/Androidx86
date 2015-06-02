@@ -17,7 +17,7 @@
 <favorites xmlns:launcher="http://schemas.android.com/apk/res/com.android.launcher3">
     <!-- Update the db with new hotseat all apps button. -->
     <!-- Hotseat (We use the screen as the position of the item in the hotseat) -->
-    <favorite
+<!--     <favorite
         launcher:packageName="com.android.dialer"
         launcher:className="com.android.dialer.DialtactsActivity"
         launcher:container="-101"
@@ -49,5 +49,5 @@
         launcher:container="-101"
         launcher:screen="0"
         launcher:x="5"
-        launcher:y="0" />
+        launcher:y="0" /> -->
 </favorites>

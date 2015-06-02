@@ -56,6 +56,20 @@ import com.android.systemui.statusbar.DelegateViewHelper;
 import com.android.systemui.statusbar.policy.DeadZone;
 import com.android.systemui.statusbar.policy.KeyButtonView;
 
+//Added
+import android.widget.GridView;
+import android.view.LayoutInflater;
+import android.widget.BaseAdapter;
+import android.widget.TextView;
+import android.view.KeyEvent;
+import com.android.systemui.recent.RecentsPanelView;
+import com.android.systemui.recent.RecentTasksLoader;
+import com.android.systemui.recent.TaskDescription;
+import android.widget.Toast;
+//import com.android.systemui.recent.TaskDescription.TaskDescriptionAdapter;
+import java.util.ArrayList;
+//Added
+
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
 
@@ -80,6 +94,15 @@ public class NavigationBarView extends LinearLayout {
     int mDisabledFlags = 1;
     int mNavigationIconHints = 0;
 
+
+
+    //Added
+    private RecentTasksLoader mRecentTasksLoader;
+    private ArrayList<TaskDescription> mRecentTaskDescriptions;
+    //private TaskDescriptionAdapter mListAdapter;
+    //Added
+
+
     private Drawable mBackIcon, mBackLandIcon, mBackAltIcon, mBackAltLandIcon;
     private Drawable mRecentIcon;
     private Drawable mRecentLandIcon;
@@ -97,6 +120,7 @@ public class NavigationBarView extends LinearLayout {
 
     // performs manual animation in sync with layout transitions
     private final NavTransitionListener mTransitionListener = new NavTransitionListener();
+
 
     private class NavTransitionListener implements TransitionListener {
         private boolean mBackTransitioning;
@@ -200,6 +224,10 @@ public class NavigationBarView extends LinearLayout {
     public NavigationBarView(Context context, AttributeSet attrs) {
         super(context, attrs);
 
+        //Added
+        mRecentTasksLoader = RecentTasksLoader.getInstance(context);
+        //Added
+
         mDisplay = ((WindowManager)context.getSystemService(
                 Context.WINDOW_SERVICE)).getDefaultDisplay();
 
@@ -215,6 +243,56 @@ public class NavigationBarView extends LinearLayout {
 
         mCameraDisabledByDpm = isCameraDisabledByDpm();
         watchForDevicePolicyChanges();
+
+        //added
+        //updateTaskDescriptions();
+        //mRecentTaskDescriptions = mRecentTasksLoader.getLoadedTasks();
+        //tv.setText("blahblahblah");
+        // int s;
+        // if (getTaskDescriptions() == null)
+        //     s = 0;
+        // else
+        //     s = getTaskDescriptions().size();
+        // String ss = Integer.toString(s);
+        // android.widget.Toast.makeText(mContext,
+        //         ss,
+        //         500).show();
+    }
+
+    private class ViewHolder {
+        ImageView iconView;
+        TaskDescription taskDescription;
+    }
+
+    //added
+    public void updateTaskDescriptions(){
+        LinearLayout iconbar = (LinearLayout) mCurrentView.findViewById(R.id.task_bar);
+        iconbar.removeAllViews();
+        ViewHolder holder = new ViewHolder();
+        //ImageView appicon = new ImageView(iconbar.getContext());
+
+        int s;
+        if (mRecentTasksLoader.getLoadedTasks() != null){
+            mRecentTaskDescriptions = mRecentTasksLoader.getLoadedTasks();
+            s = mRecentTaskDescriptions.size();
+            for(int i = 0; i<s; i++){
+                TaskDescription td = mRecentTaskDescriptions.get(s-i-1);
+                holder.iconView = new ImageView(iconbar.getContext());
+                holder.taskDescription = td;
+                 if(td.isLoaded()&&(td.getIcon()!=null)){
+                     holder.iconView.setImageDrawable(td.getIcon());
+                     iconbar.addView(holder.iconView);
+                 }
+            }
+        }
+
+        //appicon.setVisibility(VISIBLE);
+    }
+
+    public ArrayList<TaskDescription> getTaskDescriptions(){
+        if(mRecentTaskDescriptions!=null)
+            return mRecentTaskDescriptions;
+        return null;
     }
 
     private void watchForDevicePolicyChanges() {
@@ -286,6 +364,10 @@ public class NavigationBarView extends LinearLayout {
     //Added
     public View getLaunchButton() {
         return mCurrentView.findViewById(R.id.zlaunch);
+    }
+
+    public View getIconArea() {
+        return mCurrentView.findViewById(R.id.system_icon_area);
     }
 
 
@@ -535,10 +617,13 @@ public class NavigationBarView extends LinearLayout {
 
         //Added
         getBackButton().setVisibility(View.GONE);
-        getHomeButton().setVisibility(View.GONE);
-        getRecentsButton().setVisibility(View.GONE);
+        //getHomeButton().setVisibility(View.GONE);
+        //getRecentsButton().setVisibility(View.GONE);
         //getLaunchButton().setVisibility(View.VISIBLE);
-
+        //tv.setText("111");
+        //mRecentTaskDescriptions = mRecentTasksLoader.getInstance(getContext());
+        //mRecentTaskDescriptions[1].getIcon().
+        //getIconArea().setVisibility(View.VISIBLE);
     }
 
     @Override
@@ -547,9 +632,11 @@ public class NavigationBarView extends LinearLayout {
         mDelegateHelper.setInitialTouchRegion(getHomeButton(), getBackButton(), getRecentsButton());
         //Added
         getBackButton().setVisibility(View.GONE);
-        getHomeButton().setVisibility(View.GONE);
-        getRecentsButton().setVisibility(View.GONE);
+        //getHomeButton().setVisibility(View.GONE);
+        //getRecentsButton().setVisibility(View.GONE);
         //getLaunchButton().setVisibility(View.VISIBLE);
+        //tv.setText("222");
+        //getIconArea().setVisibility(View.VISIBLE);
     }
 
     @Override

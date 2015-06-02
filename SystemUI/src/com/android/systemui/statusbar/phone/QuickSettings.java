@@ -141,6 +141,19 @@ class QuickSettings {
         profileFilter.addAction(Intent.ACTION_USER_INFO_CHANGED);
         mContext.registerReceiverAsUser(mProfileReceiver, UserHandle.ALL, profileFilter,
                 null, null);
+
+        //Added
+        ActionReceiver receiver = new ActionReceiver();
+        IntentFilter filter2 = new IntentFilter();
+        filter2.addAction("packages.apps.Trebuchet.menuButtonClick.shutdown");
+        filter2.addAction("packages.apps.Trebuchet.menuButtonClick.settings");
+        filter2.addAction("packages.apps.Trebuchet.menuButtonClick.brightness");
+        filter2.addAction("packages.apps.Trebuchet.menuButtonClick.wifi");
+        filter2.addAction("packages.apps.Trebuchet.menuButtonClick.location");
+        filter2.addAction("packages.apps.Trebuchet.menuButtonClick.bluetooth");
+        filter2.addAction("packages.apps.Trebuchet.menuButtonClick.battery");
+        context.registerReceiver(receiver, filter2);
+
     }
 
     void setBar(PanelBar bar) {
@@ -668,6 +681,7 @@ class QuickSettings {
         parent.addView(powerOffTile);
     }
 
+
     private void addTemporaryTiles(final ViewGroup parent, final LayoutInflater inflater) {
         // Alarm tile
         final QuickSettingsBasicTile alarmTile
@@ -916,6 +930,35 @@ class QuickSettings {
 
         }
     };
+
+    //Added
+    public class ActionReceiver extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if ("packages.apps.Trebuchet.menuButtonClick.shutdown".equalsIgnoreCase(intent.getAction())) {
+                onClickPowerOff();
+            }
+            else if ("packages.apps.Trebuchet.menuButtonClick.brightness".equalsIgnoreCase(intent.getAction())) {
+                showBrightnessDialog();
+            }
+            else if ("packages.apps.Trebuchet.menuButtonClick.battery".equalsIgnoreCase(intent.getAction())) {
+                startSettingsActivity(Intent.ACTION_POWER_USAGE_SUMMARY);
+            }
+            else if ("packages.apps.Trebuchet.menuButtonClick.wifi".equalsIgnoreCase(intent.getAction())) {
+                startSettingsActivity(android.provider.Settings.ACTION_WIFI_SETTINGS);
+            }
+            else if ("packages.apps.Trebuchet.menuButtonClick.location".equalsIgnoreCase(intent.getAction())) {
+                startSettingsActivity(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+            }
+            else if ("packages.apps.Trebuchet.menuButtonClick.bluetooth".equalsIgnoreCase(intent.getAction())) {
+                startSettingsActivity(android.provider.Settings.ACTION_BLUETOOTH_SETTINGS);
+            }
+            else if ("packages.apps.Trebuchet.menuButtonClick.settings".equalsIgnoreCase(intent.getAction())) {
+                startSettingsActivity(android.provider.Settings.ACTION_SETTINGS);
+            }
+        }
+    }
+
 
     private abstract static class NetworkActivityCallback
             implements QuickSettingsModel.RefreshCallback {

@@ -132,7 +132,10 @@ public class RecentTasksLoader implements View.OnTouchListener {
     }
 
     public ArrayList<TaskDescription> getLoadedTasks() {
-        return mLoadedTasks;
+        //changed
+        if(mLoadedTasks!=null)
+            return mLoadedTasks;
+        return null;
     }
 
     public void remove(TaskDescription td) {

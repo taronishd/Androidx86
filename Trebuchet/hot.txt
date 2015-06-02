@@ -1,0 +1,502 @@
+./proguard.flags:  public void launchHotSeat(android.view.View);
+./res/values-uk/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"Немає вільного місця."</string>
+./res/values-uk/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Цей віджет завеликий."</string>
+./res/values-ko/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"즐겨찾는 앱 모음에 더 이상 빈 공간이 없습니다."</string>
+./res/values-ko/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"이 위젯은 너무 커서 즐겨찾는 앱 모음에 들어갈 수 없습니다."</string>
+./res/values-hr/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"Na hotseatu više nema mjesta."</string>
+./res/values-hr/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Ovaj je widget prevelik za hotseat."</string>
+./res/values-fr/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"Vous n\'avez plus de place sur la barre d\'accès rapide."</string>
+./res/values-fr/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Ce widget est trop volumineux pour la barre d\'accès rapide."</string>
+./res/values-en-rGB/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"No more room on the hot seat."</string>
+./res/values-en-rGB/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"This widget is too large for the hot seat."</string>
+./res/values-fa/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"فضای بیشتری در جایگاه اتصال نیست."</string>
+./res/values-fa/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"این ابزارک بیش از حد برای جایگاه اتصال بزرگ است."</string>
+./res/values-zh-rCN/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"底部区域已无空间。"</string>
+./res/values-zh-rCN/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"该小部件太大，底部区域容纳不下。"</string>
+./res/values/attrs.xml:    <!-- Hotseat specific attributes. These attributes are used to customize
+./res/values/attrs.xml:         the hotseat in XML files. -->
+./res/values/attrs.xml:    <declare-styleable name="Hotseat">
+./res/values/strings.xml:    <!-- Error message when user has filled the hotseat -->
+./res/values/strings.xml:    <string name="hotseat_out_of_space">No more room on the hotseat.</string>
+./res/values/strings.xml:    <!-- Error message when user tries to drop an invalid item on the hotseat -->
+./res/values/strings.xml:    <string name="invalid_hotseat_item">This widget is too large for the hotseat.</string>
+./res/values/config.xml:<!-- Hotseat -->
+./res/values/config.xml:    <bool name="hotseat_transpose_layout_with_orientation">true</bool>
+./res/values-th/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"ไม่มีที่ว่างใน hotseat"</string>
+./res/values-th/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"วิดเจ็ตนี้มีขนาดใหญ่เกินไปสำหรับ hotseat"</string>
+./res/xml-sw600dp/default_workspace_no_telephony.xml:    <!-- Hotseat -->
+./res/xml-sw600dp/update_workspace.xml:    <!-- Update the db with new hotseat all apps button. -->
+./res/xml-sw600dp/update_workspace.xml:    <!-- Hotseat (We use the screen as the position of the item in the hotseat) -->
+./res/xml-sw600dp/default_workspace.xml:    <!-- Hotseat -->
+./res/xml-sw600dp/update_workspace_no_telephony.xml:    <!-- Update the db with new hotseat all apps button. -->
+./res/xml-sw600dp/update_workspace_no_telephony.xml:    <!-- Hotseat (We use the screen as the position of the item in the hotseat) -->
+./res/values-ug/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"ئاساسىي تەگلىكتە ئورۇن يوق."</string>
+./res/values-ug/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"ئاساسىي تەگلىك ئۈچۈن بۇ ئەپچە بەك چوڭ."</string>
+./res/values-ar/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"ليست هناك مساحة أخرى في منطقة الإرساء القابلة للتخصيص."</string>
+./res/values-ar/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"حجم هذه الأداة كبير للغاية بحيث لا تتسع له منطقة الإرساء القابلة للتخصيص."</string>
+./res/values-lo-rLA/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"ບໍ່ມີຫ້ອງຫວ່າງໃນ hotseat ແລ້ວ."</string>
+./res/values-lo-rLA/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"ວິດເຈັດ ມີຂະໜາດໃຫຍ່ເກີນໄປສຳລັບ hotseat."</string>
+./res/values-et-rEE/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"Kohandataval dokialal pole rohkem ruumi."</string>
+./res/values-et-rEE/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"See vidin on kohandatava dokiala jaoks liiga suur."</string>
+./res/values-af/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"Niks meer plek op die warmlaai nie."</string>
+./res/values-af/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Hierdie legstuk is te groot vir die warmlaai."</string>
+./res/values-ro/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"Nu mai este loc în bara de lansare rapidă."</string>
+./res/values-ro/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Acest widget este prea mare pentru bara de lansare rapidă."</string>
+./res/values-et/strings.xml:    <string name="hotseat_out_of_space" msgid="6304886797358479361">"Kohandataval dokialal pole rohkem ruumi."</string>
+./res/values-et/strings.xml:    <string name="invalid_hotseat_item" msgid="6545340627805449250">"See vidin on tööpunkti jaoks liiga suur."</string>
+./res/values-pl/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"Brak miejsca w kieszonce."</string>
+./res/values-pl/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Ten widżet jest za duży, by umieścić go w kieszonce."</string>
+./res/values-pt/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"Não há mais espaço no hotseat."</string>
+./res/values-pt/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Este widget é muito grande para o hotseat."</string>
+./res/values-bg/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"В трамплина няма повече място."</string>
+./res/values-bg/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Това приспособление е твърде голямо за трамплина."</string>
+./res/values-mn-rMN/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"Суурь зайгүй."</string>
+./res/values-mn-rMN/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Энэ виджет сууринд хэт томдож байна."</string>
+./res/values-sw/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"Hakuna nafasi zaidi kwenye eneo kali."</string>
+./res/values-sw/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Wijeti hii ni kubwa zaidi kwa eneo kali."</string>
+./res/values-it/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"Spazio nell\'area hotseat esaurito."</string>
+./res/values-it/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Questo widget è troppo grande per l\'area hotseat."</string>
+./res/layout-sw720dp/launcher.xml:        <include layout="@layout/hotseat"
+./res/layout-sw720dp/launcher.xml:            android:id="@+id/hotseat"
+./res/values-fi/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"Hotseatissa ei ole enää tilaa."</string>
+./res/values-fi/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Tämä widget on liian suuri tähän hotseat-paikkaan."</string>
+./res/values-sk/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"V časti hotseat už nie je miesto."</string>
+./res/values-sk/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Táto miniaplikácia je pre hotseat príliš veľká."</string>
+./res/values-ms/strings.xml:    <string name="hotseat_out_of_space" msgid="6304886797358479361">"Tiada lagi ruang pada kerusi panas."</string>
+./res/values-ms/strings.xml:    <string name="invalid_hotseat_item" msgid="6545340627805449250">"Widget ini terlalu besar untuk kerusi panas."</string>
+./res/layout-land/launcher.xml:        <include layout="@layout/hotseat"
+./res/layout-land/launcher.xml:            android:id="@+id/hotseat"
+./res/values-sr/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"Нема више простора на траци актуелности."</string>
+./res/values-sr/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Овај виџет је превелики за траку актуелности."</string>
+./res/values-el/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"Δεν υπάρχει άλλος χώρος στη γραμμή γρήγορης πρόσβασης."</string>
+./res/values-el/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Αυτό το γραφικό στοιχείο είναι πολύ μεγάλο για τη γραμμή γρήγορης πρόσβασης."</string>
+./res/values-cs/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"V sekci hotseat již není místo."</string>
+./res/values-cs/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Widget je pro hotseat příliš velký."</string>
+./res/xml-sw720dp/default_workspace_no_telephony.xml:    <!-- Hotseat -->
+./res/xml-sw720dp/update_workspace.xml:    <!-- Update the db with new hotseat all apps button. -->
+./res/xml-sw720dp/update_workspace.xml:    <!-- Hotseat (We use the screen as the position of the item in the hotseat) -->
+./res/xml-sw720dp/default_workspace.xml:    <!-- Hotseat -->
+./res/xml-sw720dp/update_workspace_no_telephony.xml:    <!-- Update the db with new hotseat all apps button. -->
+./res/xml-sw720dp/update_workspace_no_telephony.xml:    <!-- Hotseat (We use the screen as the position of the item in the hotseat) -->
+./res/values-ja/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"ホットシートに空きスペースがありません。"</string>
+./res/values-ja/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"このウィジェットはホットシートには大きすぎます。"</string>
+./res/values-km-rKH/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"គ្មាន​បន្ទប់​នៅ​ក្នុង​មជ្ឈមណ្ឌល​ទៀត​ទេ។"</string>
+./res/values-km-rKH/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"ធាតុ​ក្រាហ្វិក​នេះ​ធំ​ពេក​សម្រាប់​មជ្ឈមណ្ឌល។"</string>
+./res/values-hi/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"हॉटसीट पर स्थान शेष नहीं है."</string>
+./res/values-hi/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"हॉटसीट के लि‍ए यह वि‍जेट बहुत बड़ा है."</string>
+./res/values-nb/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"Dokksonen er full."</string>
+./res/values-nb/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Denne modulen er for stor for dokksonen."</string>
+./res/values-hu/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"Nincs több hely az egyéni mezőben."</string>
+./res/values-hu/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Ez a modul túl nagy az egyéni mező számára."</string>
+./res/values-lt/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"Įtvirtintojoje srityje nebėra vietos."</string>
+./res/values-lt/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Šis valdiklis įtvirtintajai sričiai per didelis."</string>
+./res/values-rm/strings.xml:    <!-- no translation found for hotseat_out_of_space (9139760413395605841) -->
+./res/values-rm/strings.xml:    <!-- no translation found for invalid_hotseat_item (1211534262129849507) -->
+./res/values-hy-rAM/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"Թեժ նստատեղերում այլևս տեղ չկա:"</string>
+./res/values-hy-rAM/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Այս վիջեթը չափազանց մեծ է թեժ նստատեղերի համար:"</string>
+./res/layout/hotseat.xml:<com.android.launcher3.Hotseat
+./res/layout/hotseat.xml:</com.android.launcher3.Hotseat>
+./res/values-am/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"በመትከያ ቦታው ላይ ተጨማሪ ቦታ የለም።"</string>
+./res/values-am/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"ይህ ፍርግም ለመትከያ ቦታው በጣም ትልቅ ነው።"</string>
+./res/values-da/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"Der er ikke mere plads i hotseat."</string>
+./res/values-da/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Denne widget er for stor til hotseat."</string>
+./res/values-de/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"Kein Platz mehr auf der App-Leiste"</string>
+./res/values-de/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Dieses Widget ist zu groß für die App-Leiste."</string>
+./res/values-en-rIN/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"No more room on the hot seat."</string>
+./res/values-en-rIN/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"This widget is too large for the hot seat."</string>
+./res/values-lv/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"Režīmā “hotseat” vairs nav vietas."</string>
+./res/values-lv/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Šis logrīks ir pārāk liels režīmam “hotseat”."</string>
+./res/values-ka-rGE/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"hotseat-ში მეტი ადგილი არ არის."</string>
+./res/values-ka-rGE/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"ეს ვიჯეტი ძალიან დიდია hotseat-ისთვის."</string>
+./res/values-ms-rMY/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"Tiada lagi ruang pada kerusi panas."</string>
+./res/values-ms-rMY/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Widget ini terlalu besar untuk kerusi panas."</string>
+./res/values-zh-rTW/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"停駐區已無空間。"</string>
+./res/values-zh-rTW/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"這個小工具過大，停駐區無法容納。"</string>
+./res/values-zu/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"Akusenagumbi ku-hotseat."</string>
+./res/values-zu/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Le wijethi inkulu kakhulu ukuba ku-hotseat."</string>
+./res/values-es-rUS/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"No hay más espacio en la barra de accesos directos."</string>
+./res/values-es-rUS/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Este widget es demasiado grande para la barra de accesos directos."</string>
+./res/values-vi/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"Không còn chỗ trên vùng gắn."</string>
+./res/values-vi/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Tiện ích con này quá lớn cho vùng gắn."</string>
+./res/values-ru/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"Нет свободного места в слоте"</string>
+./res/values-ru/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Виджет слишком велик для слота"</string>
+./res/layout-port/launcher.xml:        <include layout="@layout/hotseat"
+./res/layout-port/launcher.xml:            android:id="@+id/hotseat"
+./res/layout-port/workspace_cling.xml:            android:id="@+id/focused_hotseat_app_bubble"
+./res/layout-port/workspace_cling.xml:                    android:id="@+id/focused_hotseat_app_title"
+./res/layout-port/workspace_cling.xml:                    android:id="@+id/focused_hotseat_app_description"
+./res/values-sv/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"Utrymmet på Hotseat är fullt."</string>
+./res/values-sv/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Denna widget är för stor för Hotseat."</string>
+./res/values-be/strings.xml:    <!-- no translation found for hotseat_out_of_space (9139760413395605841) -->
+./res/values-be/strings.xml:    <!-- no translation found for invalid_hotseat_item (1211534262129849507) -->
+./res/values-ca/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"No queda espai al hotseat."</string>
+./res/values-ca/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Aquest widget és massa gran per al hotseat."</string>
+./res/values-tl/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"Wala nang lugar sa hotseat."</string>
+./res/values-tl/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Masyadong malaki ang widget na ito para sa hotseat."</string>
+./res/values-sw720dp/config.xml:<!-- Hotseat -->
+./res/values-sw720dp/config.xml:    <bool name="hotseat_transpose_layout_with_orientation">false</bool>
+./res/values-in/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"Tidak ada ruang lagi di hotseat."</string>
+./res/values-in/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Widget ini terlalu besar untuk hotseat tersebut."</string>
+./res/values-zh-rHK/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"停駐區已無可用空間。"</string>
+./res/values-zh-rHK/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"這個小工具過大，停駐區沒有足夠空間。"</string>
+./res/values-nl/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"Er is geen ruimte meer op de hotseat."</string>
+./res/values-nl/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Deze widget is te groot voor de hotseat."</string>
+./res/values-pt-rPT/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"Sem espaço suficiente na barra personalizável."</string>
+./res/values-pt-rPT/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Este widget é demasiado grande para a barra personalizável."</string>
+./res/values-es/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"No queda espacio en la barra de accesos directos."</string>
+./res/values-es/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Este widget es demasiado grande para la barra de accesos directos."</string>
+./res/values-sl/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"V vrstici z ikonami ni več prostora."</string>
+./res/values-sl/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Ta pripomoček je prevelik za vrstico z ikonami."</string>
+./res/values-fr-rCA/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"Vous n\'avez plus de place sur la barre d\'accès rapide."</string>
+./res/values-fr-rCA/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Ce widget est trop volumineux pour la barre d\'accès rapide."</string>
+./res/values-iw/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"אין יותר מקום בפס האפליקציות."</string>
+./res/values-iw/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"הווידג\'ט הזה גדול מדי עבור פס האפליקציות."</string>
+./res/xml/default_workspace_no_telephony.xml:    <!-- Hotseat (We use the screen as the position of the item in the hotseat) -->
+./res/xml/update_workspace.xml:    <!-- Update the db with new hotseat all apps button. -->
+./res/xml/update_workspace.xml:    <!-- Hotseat (We use the screen as the position of the item in the hotseat) -->
+./res/xml/default_workspace.xml:    <!-- Hotseat (We use the screen as the position of the item in the hotseat) -->
+./res/xml/update_workspace_no_telephony.xml:    <!-- Update the db with new hotseat all apps button. -->
+./res/xml/update_workspace_no_telephony.xml:    <!-- Hotseat (We use the screen as the position of the item in the hotseat) -->
+./res/values-es-rXA/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">Nun queda espaciu na barra d\'accesos direutos.</string>
+./res/values-es-rXA/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">Esti widget ye abondo grande pa la barra d\'accesos direutos.</string>
+./res/values-tr/strings.xml:    <string name="hotseat_out_of_space" msgid="9139760413395605841">"Favori kısa yollarda yer yok"</string>
+./res/values-tr/strings.xml:    <string name="invalid_hotseat_item" msgid="1211534262129849507">"Bu widget, favori kısa yollar için çok büyük."</string>
+Binary file ./.git/index matches
+Binary file ./.git/objects/pack/pack-21e946eed49dc03e40709f927a75e8b856c7b169.pack matches
+./print_db.py:HOTSEAT_SIZE = 4
+./print_db.py:CONTAINER_HOTSEAT = -101
+./print_db.py:  global SCREENS, COLUMNS, ROWS, HOTSEAT_SIZE
+./print_db.py:  hotseatIdMap = []
+./print_db.py:  HOTSEAT_SIZE = 0
+./print_db.py:    elif d["container"] == CONTAINER_HOTSEAT:
+./print_db.py:      hotseatIdMap.append(d["screen"])
+./print_db.py:      HOTSEAT_SIZE = max(HOTSEAT_SIZE, d["screen"] + 1)
+./print_db.py:  # Hotseat
+./print_db.py:  hotseat = []
+./print_db.py:  for i in range(0, HOTSEAT_SIZE):
+./print_db.py:    hotseat.append(None)
+./print_db.py:    if row["container"] != CONTAINER_HOTSEAT:
+./print_db.py:    hotseat[screen] = row
+./print_db.py:  out.write("<br/><b>Hotseat</b><br/>\n")
+./print_db.py:  for cell in hotseat:
+./print_db.py:  global SCREENS, COLUMNS, ROWS, HOTSEAT_SIZE
+./print_db.py:    HOTSEAT_SIZE = 6
+./print_db.py:    HOTSEAT_SIZE = 8
+./src/com/android/launcher3/ShortcutAndWidgetContainer.java:    private boolean mIsHotseatLayout;
+./src/com/android/launcher3/ShortcutAndWidgetContainer.java:    public void setIsHotseat(boolean isHotseat) {
+./src/com/android/launcher3/ShortcutAndWidgetContainer.java:        mIsHotseatLayout = isHotseat;
+./src/com/android/launcher3/ShortcutAndWidgetContainer.java:        return Math.min(getMeasuredHeight(), mIsHotseatLayout ?
+./src/com/android/launcher3/ShortcutAndWidgetContainer.java:                grid.hotseatCellWidthPx: grid.cellWidthPx);
+./src/com/android/launcher3/ShortcutAndWidgetContainer.java:        return Math.min(getMeasuredHeight(), mIsHotseatLayout ?
+./src/com/android/launcher3/ShortcutAndWidgetContainer.java:                grid.hotseatCellHeightPx : grid.cellHeightPx);
+./src/com/android/launcher3/Hotseat.java:public class Hotseat extends FrameLayout {
+./src/com/android/launcher3/Hotseat.java:    private static final String TAG = "Hotseat";
+./src/com/android/launcher3/Hotseat.java:    public Hotseat(Context context) {
+./src/com/android/launcher3/Hotseat.java:    public Hotseat(Context context, AttributeSet attrs) {
+./src/com/android/launcher3/Hotseat.java:    public Hotseat(Context context, AttributeSet attrs, int defStyle) {
+./src/com/android/launcher3/Hotseat.java:                r.getBoolean(R.bool.hotseat_transpose_layout_with_orientation);
+./src/com/android/launcher3/Hotseat.java:        setOnKeyListener(new HotseatIconKeyEventListener());
+./src/com/android/launcher3/Hotseat.java:     * Registers the specified listener on the cell layout of the hotseat.
+./src/com/android/launcher3/Hotseat.java:    private boolean hasVerticalHotseat() {
+./src/com/android/launcher3/Hotseat.java:    /* Get the orientation invariant order of the item in the hotseat for persistence. */
+./src/com/android/launcher3/Hotseat.java:    int getOrderInHotseat(int x, int y) {
+./src/com/android/launcher3/Hotseat.java:        return hasVerticalHotseat() ? (mContent.getCountY() - y - 1) : x;
+./src/com/android/launcher3/Hotseat.java:    /* Get the orientation specific coordinates given an invariant order in the hotseat. */
+./src/com/android/launcher3/Hotseat.java:        return hasVerticalHotseat() ? 0 : rank;
+./src/com/android/launcher3/Hotseat.java:        return hasVerticalHotseat() ? (mContent.getCountY() - (rank + 1)) : 0;
+./src/com/android/launcher3/Hotseat.java:        int[] hotseatInParent = new int[2];
+./src/com/android/launcher3/Hotseat.java:                hotseatInParent, false);
+./src/com/android/launcher3/Hotseat.java:        coords.offset(hotseatInParent[0], hotseatInParent[1]);
+./src/com/android/launcher3/Hotseat.java:        mAllAppsButtonRank = grid.hotseatAllAppsRank;
+./src/com/android/launcher3/Hotseat.java:            mContent.setGridSize(1, (int) grid.numHotseatIcons);
+./src/com/android/launcher3/Hotseat.java:            mContent.setGridSize((int) grid.numHotseatIcons, 1);
+./src/com/android/launcher3/Hotseat.java:        mContent.setIsHotseat(true);
+./src/com/android/launcher3/Hotseat.java:        // We don't want any clicks to go through to the hotseat unless the workspace is in
+./src/com/android/launcher3/Hotseat.java:            fi.container = LauncherSettings.Favorites.CONTAINER_HOTSEAT;
+./src/com/android/launcher3/allapp.txt:./Hotseat.java:        if (AppsCustomizePagedView.DISABLE_ALL_APPS) {
+./src/com/android/launcher3/allapp.txt:./Hotseat.java:        if (AppsCustomizePagedView.DISABLE_ALL_APPS) {
+./src/com/android/launcher3/DragLayer.java:        // This ensures that the workspace is drawn above the hotseat and qsb,
+./src/com/android/launcher3/Folder.java:                // to ensure that hotseat items are placed correctly.
+./src/com/android/launcher3/Cling.java:    private Drawable mFocusedHotseatApp;
+./src/com/android/launcher3/Cling.java:    private ComponentName mFocusedHotseatAppComponent;
+./src/com/android/launcher3/Cling.java:    private Rect mFocusedHotseatAppBounds;
+./src/com/android/launcher3/Cling.java:    void setFocusedHotseatApp(int drawableId, int appRank, ComponentName cn, String title,
+./src/com/android/launcher3/Cling.java:        Hotseat hotseat = mLauncher.getHotseat();
+./src/com/android/launcher3/Cling.java:        if (hotseat != null && appIconId > -1 && appRank > -1 && !title.isEmpty() &&
+./src/com/android/launcher3/Cling.java:            int x = hotseat.getCellXFromOrder(appRank);
+./src/com/android/launcher3/Cling.java:            int y = hotseat.getCellYFromOrder(appRank);
+./src/com/android/launcher3/Cling.java:            Rect pos = hotseat.getCellCoordinates(x, y);
+./src/com/android/launcher3/Cling.java:            mFocusedHotseatApp = getResources().getDrawable(appIconId);
+./src/com/android/launcher3/Cling.java:            mFocusedHotseatAppComponent = cn;
+./src/com/android/launcher3/Cling.java:            mFocusedHotseatAppBounds = new Rect(pos.left, pos.top,
+./src/com/android/launcher3/Cling.java:            Utilities.scaleRectAboutCenter(mFocusedHotseatAppBounds,
+./src/com/android/launcher3/Cling.java:                    (grid.hotseatIconSize / grid.iconSize));
+./src/com/android/launcher3/Cling.java:            TextView v = (TextView) findViewById(R.id.focused_hotseat_app_title);
+./src/com/android/launcher3/Cling.java:            v = (TextView) findViewById(R.id.focused_hotseat_app_description);
+./src/com/android/launcher3/Cling.java:            View bubble = findViewById(R.id.focused_hotseat_app_bubble);
+./src/com/android/launcher3/Cling.java:            if (mFocusedHotseatAppBounds != null &&
+./src/com/android/launcher3/Cling.java:                mFocusedHotseatAppBounds.contains(mTouchDownPt[0], mTouchDownPt[1])) {
+./src/com/android/launcher3/Cling.java:                intent.setComponent(mFocusedHotseatAppComponent);
+./src/com/android/launcher3/Cling.java:                // Draw the focused hotseat app icon
+./src/com/android/launcher3/Cling.java:                if (mFocusedHotseatAppBounds != null && mFocusedHotseatApp != null) {
+./src/com/android/launcher3/Cling.java:                    mFocusedHotseatApp.setBounds(mFocusedHotseatAppBounds.left,
+./src/com/android/launcher3/Cling.java:                            mFocusedHotseatAppBounds.top, mFocusedHotseatAppBounds.right,
+./src/com/android/launcher3/Cling.java:                            mFocusedHotseatAppBounds.bottom);
+./src/com/android/launcher3/Cling.java:                    mFocusedHotseatApp.setAlpha((int) (255 * alpha));
+./src/com/android/launcher3/Cling.java:                    mFocusedHotseatApp.draw(canvas);
+./src/com/android/launcher3/CellLayout.java:    private boolean mIsHotseat = false;
+./src/com/android/launcher3/CellLayout.java:    private float mHotseatScale = 1f;
+./src/com/android/launcher3/CellLayout.java:        mHotseatScale = (float) grid.hotseatIconSize / grid.iconSize;
+./src/com/android/launcher3/CellLayout.java:        return mIsHotseat ? mHotseatScale : 1.0f;
+./src/com/android/launcher3/CellLayout.java:    public void setIsHotseat(boolean isHotseat) {
+./src/com/android/launcher3/CellLayout.java:        mIsHotseat = isHotseat;
+./src/com/android/launcher3/CellLayout.java:        mShortcutsAndWidgets.setIsHotseat(isHotseat);
+./src/com/android/launcher3/CellLayout.java:        // Hotseat icons - remove text
+./src/com/android/launcher3/CellLayout.java:        if (mIsHotseat && child instanceof BubbleTextView) {
+./src/com/android/launcher3/CellLayout.java:            // AllApps button in the hotseat.
+./src/com/android/launcher3/LauncherSettings.java:        static final int CONTAINER_HOTSEAT = -101;
+./src/com/android/launcher3/LauncherSettings.java:         * (if container is CONTAINER_HOTSEAT or CONTAINER_HOTSEAT)
+./src/com/android/launcher3/LauncherModel.java:                    item.container != LauncherSettings.Favorites.CONTAINER_HOTSEAT) {
+./src/com/android/launcher3/LauncherModel.java:                    modelItem.container == LauncherSettings.Favorites.CONTAINER_HOTSEAT) {
+./src/com/android/launcher3/LauncherModel.java:        // We store hotseat items in canonical form which is this orientation invariant position
+./src/com/android/launcher3/LauncherModel.java:        // in the hotseat
+./src/com/android/launcher3/LauncherModel.java:                container == LauncherSettings.Favorites.CONTAINER_HOTSEAT) {
+./src/com/android/launcher3/LauncherModel.java:            item.screenId = ((Launcher) context).getHotseat().getOrderInHotseat(cellX, cellY);
+./src/com/android/launcher3/LauncherModel.java:            // We store hotseat items in canonical form which is this orientation invariant position
+./src/com/android/launcher3/LauncherModel.java:            // in the hotseat
+./src/com/android/launcher3/LauncherModel.java:                    container == LauncherSettings.Favorites.CONTAINER_HOTSEAT) {
+./src/com/android/launcher3/LauncherModel.java:                item.screenId = ((Launcher) context).getHotseat().getOrderInHotseat(item.cellX,
+./src/com/android/launcher3/LauncherModel.java:        // We store hotseat items in canonical form which is this orientation invariant position
+./src/com/android/launcher3/LauncherModel.java:        // in the hotseat
+./src/com/android/launcher3/LauncherModel.java:                container == LauncherSettings.Favorites.CONTAINER_HOTSEAT) {
+./src/com/android/launcher3/LauncherModel.java:            item.screenId = ((Launcher) context).getHotseat().getOrderInHotseat(cellX, cellY);
+./src/com/android/launcher3/LauncherModel.java:        // We store hotseat items in canonical form which is this orientation invariant position
+./src/com/android/launcher3/LauncherModel.java:        // in the hotseat
+./src/com/android/launcher3/LauncherModel.java:                container == LauncherSettings.Favorites.CONTAINER_HOTSEAT) {
+./src/com/android/launcher3/LauncherModel.java:            item.screenId = ((Launcher) context).getHotseat().getOrderInHotseat(cellX, cellY);
+./src/com/android/launcher3/LauncherModel.java:                                    item.container == LauncherSettings.Favorites.CONTAINER_HOTSEAT) {
+./src/com/android/launcher3/LauncherModel.java:        int allAppsIndex = grid.hotseatAllAppsRank;
+./src/com/android/launcher3/LauncherModel.java:        LauncherModel.addOrMoveItemInDatabase(mApp.getContext(), allAppsShortcut, LauncherSettings.Favorites.CONTAINER_HOTSEAT,
+./src/com/android/launcher3/LauncherModel.java:        if (item.container == LauncherSettings.Favorites.CONTAINER_HOTSEAT) {
+./src/com/android/launcher3/LauncherModel.java:            if (occupied.containsKey((long) LauncherSettings.Favorites.CONTAINER_HOTSEAT)) {
+./src/com/android/launcher3/LauncherModel.java:                if (occupied.get((long) LauncherSettings.Favorites.CONTAINER_HOTSEAT)
+./src/com/android/launcher3/LauncherModel.java:                    Log.e(TAG, "Error loading shortcut into hotseat " + item
+./src/com/android/launcher3/LauncherModel.java:                            + occupied.get((long) LauncherSettings.Favorites.CONTAINER_HOTSEAT)
+./src/com/android/launcher3/LauncherModel.java:                    if (occupied.get((long) LauncherSettings.Favorites.CONTAINER_HOTSEAT)
+./src/com/android/launcher3/LauncherModel.java:                    ItemInfo[][] hotseatItems = occupied.get(
+./src/com/android/launcher3/LauncherModel.java:                            (long) LauncherSettings.Favorites.CONTAINER_HOTSEAT);
+./src/com/android/launcher3/LauncherModel.java:                    hotseatItems[(int) item.screenId][0] = item;
+./src/com/android/launcher3/LauncherModel.java:                ItemInfo[][] items = new ItemInfo[(int) grid.numHotseatIcons][1];
+./src/com/android/launcher3/LauncherModel.java:                occupied.put((long) LauncherSettings.Favorites.CONTAINER_HOTSEAT, items);
+./src/com/android/launcher3/LauncherModel.java:            // Skip further checking if it is not the hotseat or workspace container
+./src/com/android/launcher3/LauncherModel.java:                // +1 for the hotseat (it can be larger than the workspace)
+./src/com/android/launcher3/LauncherModel.java:                                    case LauncherSettings.Favorites.CONTAINER_HOTSEAT:
+./src/com/android/launcher3/LauncherModel.java:                                    case LauncherSettings.Favorites.CONTAINER_HOTSEAT:
+./src/com/android/launcher3/LauncherModel.java:                                        container != LauncherSettings.Favorites.CONTAINER_HOTSEAT) {
+./src/com/android/launcher3/LauncherModel.java:                                            "CONTAINER_DESKTOP nor CONTAINER_HOTSEAT - ignoring!");
+./src/com/android/launcher3/LauncherModel.java:                } else if (info.container == LauncherSettings.Favorites.CONTAINER_HOTSEAT) {
+./src/com/android/launcher3/LauncherModel.java:        /** Sorts the set of items by hotseat, workspace (spatially from top to bottom, left to
+./src/com/android/launcher3/LauncherModel.java:                    int containerOffset = screenOffset * (Launcher.SCREEN_COUNT + 1); // +1 hotseat
+./src/com/android/launcher3/Workspace.java:    // At bind time, we use the rank (screenId) to compute x and y for hotseat items.
+./src/com/android/launcher3/Workspace.java:     *                          the x and y position in which to place hotseat items. Otherwise
+./src/com/android/launcher3/Workspace.java:        if (container == LauncherSettings.Favorites.CONTAINER_HOTSEAT) {
+./src/com/android/launcher3/Workspace.java:            layout = mLauncher.getHotseat().getLayout();
+./src/com/android/launcher3/Workspace.java:            // Hide folder title in the hotseat
+./src/com/android/launcher3/Workspace.java:                x = mLauncher.getHotseat().getCellXFromOrder((int) screenId);
+./src/com/android/launcher3/Workspace.java:                y = mLauncher.getHotseat().getCellYFromOrder((int) screenId);
+./src/com/android/launcher3/Workspace.java:                screenId = mLauncher.getHotseat().getOrderInHotseat(x, y);
+./src/com/android/launcher3/Workspace.java:            // Show folder title if not in the hotseat
+./src/com/android/launcher3/Workspace.java:            if (container != LauncherSettings.Favorites.CONTAINER_HOTSEAT) {
+./src/com/android/launcher3/Workspace.java:        if (mLauncher.getHotseat() != null) {
+./src/com/android/launcher3/Workspace.java:            mLauncher.getHotseat().setTranslationX(translationX);
+./src/com/android/launcher3/Workspace.java:        float finalHotseatAndPageIndicatorAlpha = (stateIsOverview || stateIsSmall) ? 0f : 1f;
+./src/com/android/launcher3/Workspace.java:        final View hotseat = mLauncher.getHotseat();
+./src/com/android/launcher3/Workspace.java:                        finalHotseatAndPageIndicatorAlpha);
+./src/com/android/launcher3/Workspace.java:            ObjectAnimator hotseatAlpha = ObjectAnimator.ofFloat(hotseat, "alpha",
+./src/com/android/launcher3/Workspace.java:                    finalHotseatAndPageIndicatorAlpha);
+./src/com/android/launcher3/Workspace.java:            hotseatAlpha.addListener(new AlphaUpdateListener(hotseat));
+./src/com/android/launcher3/Workspace.java:                hotseatAlpha.setInterpolator(new DecelerateInterpolator(2));
+./src/com/android/launcher3/Workspace.java:            anim.play(hotseatAlpha);
+./src/com/android/launcher3/Workspace.java:            hotseat.setAlpha(finalHotseatAndPageIndicatorAlpha);
+./src/com/android/launcher3/Workspace.java:            AlphaUpdateListener.updateVisibility(hotseat);
+./src/com/android/launcher3/Workspace.java:                getPageIndicator().setAlpha(finalHotseatAndPageIndicatorAlpha);
+./src/com/android/launcher3/Workspace.java:            if (mLauncher.isHotseatLayout(dropTargetLayout)) {
+./src/com/android/launcher3/Workspace.java:                mapPointFromSelfToHotseatLayout(mLauncher.getHotseat(), mDragViewVisualCenter);
+./src/com/android/launcher3/Workspace.java:                boolean isHotseat = mLauncher.isHotseatLayout(dropTargetLayout);
+./src/com/android/launcher3/Workspace.java:                mLauncher.showOutOfSpaceMessage(isHotseat);
+./src/com/android/launcher3/Workspace.java:            if (mLauncher.isHotseatLayout(dropTargetLayout)) {
+./src/com/android/launcher3/Workspace.java:                mapPointFromSelfToHotseatLayout(mLauncher.getHotseat(), mDragViewVisualCenter);
+./src/com/android/launcher3/Workspace.java:                boolean hasMovedIntoHotseat = mLauncher.isHotseatLayout(dropTargetLayout);
+./src/com/android/launcher3/Workspace.java:                long container = hasMovedIntoHotseat ?
+./src/com/android/launcher3/Workspace.java:                        LauncherSettings.Favorites.CONTAINER_HOTSEAT :
+./src/com/android/launcher3/Workspace.java:                if (getScreenIdForPageIndex(mCurrentPage) != screenId && !hasMovedIntoHotseat) {
+./src/com/android/launcher3/Workspace.java:                    if (container != LauncherSettings.Favorites.CONTAINER_HOTSEAT &&
+./src/com/android/launcher3/Workspace.java:   boolean isPointInSelfOverHotseat(int x, int y, Rect r) {
+./src/com/android/launcher3/Workspace.java:       r = grid.getHotseatRect();
+./src/com/android/launcher3/Workspace.java:   void mapPointFromSelfToHotseatLayout(Hotseat hotseat, float[] xy) {
+./src/com/android/launcher3/Workspace.java:       mLauncher.getDragLayer().mapCoordInSelfToDescendent(hotseat.getLayout(), mTempPt);
+./src/com/android/launcher3/Workspace.java:            if (mLauncher.getHotseat() != null && !isExternalDragWidget(d)) {
+./src/com/android/launcher3/Workspace.java:                if (isPointInSelfOverHotseat(d.x, d.y, r)) {
+./src/com/android/launcher3/Workspace.java:                    layout = mLauncher.getHotseat().getLayout();
+./src/com/android/launcher3/Workspace.java:                    if (mLauncher.isHotseatLayout(layout)) {
+./src/com/android/launcher3/Workspace.java:            // Test to see if we are over the hotseat otherwise just use the current page
+./src/com/android/launcher3/Workspace.java:            if (mLauncher.getHotseat() != null && !isDragWidget(d)) {
+./src/com/android/launcher3/Workspace.java:                if (isPointInSelfOverHotseat(d.x, d.y, r)) {
+./src/com/android/launcher3/Workspace.java:                    layout = mLauncher.getHotseat().getLayout();
+./src/com/android/launcher3/Workspace.java:            if (mLauncher.isHotseatLayout(mDragTargetLayout)) {
+./src/com/android/launcher3/Workspace.java:                mapPointFromSelfToHotseatLayout(mLauncher.getHotseat(), mDragViewVisualCenter);
+./src/com/android/launcher3/Workspace.java:        mLauncher.showOutOfSpaceMessage(mLauncher.isHotseatLayout(layout));
+./src/com/android/launcher3/Workspace.java:        final long container = mLauncher.isHotseatLayout(cellLayout) ?
+./src/com/android/launcher3/Workspace.java:                LauncherSettings.Favorites.CONTAINER_HOTSEAT :
+./src/com/android/launcher3/Workspace.java:        if (!mLauncher.isHotseatLayout(cellLayout)
+./src/com/android/launcher3/Workspace.java:            if (mLauncher.isHotseatLayout(target)) {
+./src/com/android/launcher3/Workspace.java:                cellLayout = mLauncher.getHotseat().getLayout();
+./src/com/android/launcher3/Workspace.java:        if (mLauncher.isHotseatLayout(cl)) {
+./src/com/android/launcher3/Workspace.java:            container = Favorites.CONTAINER_HOTSEAT;
+./src/com/android/launcher3/Workspace.java:        getUniqueIntents((CellLayout) mLauncher.getHotseat().getLayout(), uniqueIntents, duplicates, false);
+./src/com/android/launcher3/Workspace.java:        saveWorkspaceScreenToDb((CellLayout) mLauncher.getHotseat().getLayout());
+./src/com/android/launcher3/Workspace.java:        Hotseat hotseat = mLauncher.getHotseat();
+./src/com/android/launcher3/Workspace.java:        if (mLauncher.isHotseatLayout(cl)) {
+./src/com/android/launcher3/Workspace.java:            container = Favorites.CONTAINER_HOTSEAT;
+./src/com/android/launcher3/Workspace.java:                if (container == Favorites.CONTAINER_HOTSEAT) {
+./src/com/android/launcher3/Workspace.java:                    cellX = hotseat.getCellXFromOrder((int) info.screenId);
+./src/com/android/launcher3/Workspace.java:                    cellY = hotseat.getCellYFromOrder((int) info.screenId);
+./src/com/android/launcher3/Workspace.java:        if (mLauncher.getHotseat() != null && isPortrait) {
+./src/com/android/launcher3/Workspace.java:            mLauncher.getHotseat().getHitRect(r);
+./src/com/android/launcher3/Workspace.java:        ArrayList<CellLayout> layouts = getWorkspaceAndHotseatCellLayouts();
+./src/com/android/launcher3/Workspace.java:    ArrayList<CellLayout> getWorkspaceAndHotseatCellLayouts() {
+./src/com/android/launcher3/Workspace.java:        if (mLauncher.getHotseat() != null) {
+./src/com/android/launcher3/Workspace.java:            layouts.add(mLauncher.getHotseat().getLayout());
+./src/com/android/launcher3/Workspace.java:     * the hotseat and workspace pages
+./src/com/android/launcher3/Workspace.java:        if (mLauncher.getHotseat() != null) {
+./src/com/android/launcher3/Workspace.java:            childrenLayouts.add(mLauncher.getHotseat().getLayout().getShortcutsAndWidgets());
+./src/com/android/launcher3/Workspace.java:        ArrayList<CellLayout> cellLayouts = getWorkspaceAndHotseatCellLayouts();
+./src/com/android/launcher3/Workspace.java:        ArrayList<CellLayout> cellLayouts = getWorkspaceAndHotseatCellLayouts();
+./src/com/android/launcher3/DynamicGrid.java:    float numHotseatIcons;
+./src/com/android/launcher3/DynamicGrid.java:    float hotseatIconSize;
+./src/com/android/launcher3/DynamicGrid.java:    int hotseatCellWidthPx;
+./src/com/android/launcher3/DynamicGrid.java:    int hotseatCellHeightPx;
+./src/com/android/launcher3/DynamicGrid.java:    int hotseatIconSizePx;
+./src/com/android/launcher3/DynamicGrid.java:    int hotseatBarHeightPx;
+./src/com/android/launcher3/DynamicGrid.java:    int hotseatAllAppsRank;
+./src/com/android/launcher3/DynamicGrid.java:        // Ensure that we have an odd number of hotseat items (since we need to place all apps)
+./src/com/android/launcher3/DynamicGrid.java:            throw new RuntimeException("All Device Profiles must have an odd number of hotseat spaces");
+./src/com/android/launcher3/DynamicGrid.java:        numHotseatIcons = hs;
+./src/com/android/launcher3/DynamicGrid.java:        hotseatIconSize = his;
+./src/com/android/launcher3/DynamicGrid.java:                resources.getBoolean(R.bool.hotseat_transpose_layout_with_orientation);
+./src/com/android/launcher3/DynamicGrid.java:        // Interpolate the hotseat size
+./src/com/android/launcher3/DynamicGrid.java:            points.add(new DeviceProfileQuery(p.minWidthDps, p.minHeightDps, p.numHotseatIcons));
+./src/com/android/launcher3/DynamicGrid.java:        numHotseatIcons = Math.round(invDistWeightedInterpolate(minWidth, minHeight, points));
+./src/com/android/launcher3/DynamicGrid.java:        // Interpolate the hotseat icon size
+./src/com/android/launcher3/DynamicGrid.java:            points.add(new DeviceProfileQuery(p.minWidthDps, p.minHeightDps, p.hotseatIconSize));
+./src/com/android/launcher3/DynamicGrid.java:        // Hotseat
+./src/com/android/launcher3/DynamicGrid.java:        hotseatIconSize = invDistWeightedInterpolate(minWidth, minHeight, points);
+./src/com/android/launcher3/DynamicGrid.java:        hotseatIconSizePx = DynamicGrid.pxFromDp(hotseatIconSize, dm);
+./src/com/android/launcher3/DynamicGrid.java:        hotseatAllAppsRank = (int) Math.ceil(numColumns / 2);
+./src/com/android/launcher3/DynamicGrid.java:        // Hotseat
+./src/com/android/launcher3/DynamicGrid.java:        hotseatBarHeightPx = iconSizePx + 4 * edgeMarginPx;
+./src/com/android/launcher3/DynamicGrid.java:        hotseatCellWidthPx = iconSizePx;
+./src/com/android/launcher3/DynamicGrid.java:        hotseatCellHeightPx = iconSizePx;
+./src/com/android/launcher3/DynamicGrid.java:            // Pad the left and right of the workspace with search/hotseat bar sizes
+./src/com/android/launcher3/DynamicGrid.java:                    hotseatBarHeightPx, edgeMarginPx);
+./src/com/android/launcher3/DynamicGrid.java:                        hotseatBarHeightPx + pageIndicatorHeightPx);
+./src/com/android/launcher3/DynamicGrid.java:                // Pad the top and bottom of the workspace with search/hotseat bar sizes
+./src/com/android/launcher3/DynamicGrid.java:                        hotseatBarHeightPx + pageIndicatorHeightPx);
+./src/com/android/launcher3/DynamicGrid.java:    Rect getHotseatRect() {
+./src/com/android/launcher3/DynamicGrid.java:            return new Rect(availableWidthPx - hotseatBarHeightPx, 0,
+./src/com/android/launcher3/DynamicGrid.java:            return new Rect(0, availableHeightPx - hotseatBarHeightPx,
+./src/com/android/launcher3/DynamicGrid.java:        // Layout the hotseat
+./src/com/android/launcher3/DynamicGrid.java:        View hotseat = launcher.findViewById(R.id.hotseat);
+./src/com/android/launcher3/DynamicGrid.java:        lp = (FrameLayout.LayoutParams) hotseat.getLayoutParams();
+./src/com/android/launcher3/DynamicGrid.java:            // Vertical hotseat
+./src/com/android/launcher3/DynamicGrid.java:            lp.width = hotseatBarHeightPx;
+./src/com/android/launcher3/DynamicGrid.java:            hotseat.setPadding(0, 2 * edgeMarginPx,
+./src/com/android/launcher3/DynamicGrid.java:            // Pad the hotseat with the grid gap calculated above
+./src/com/android/launcher3/DynamicGrid.java:            int hotseatGap = (int) Math.max(0,
+./src/com/android/launcher3/DynamicGrid.java:                    (gridWidth - (numHotseatIcons * hotseatCellWidthPx))
+./src/com/android/launcher3/DynamicGrid.java:                            / (numHotseatIcons - 1));
+./src/com/android/launcher3/DynamicGrid.java:            lp.height = hotseatBarHeightPx;
+./src/com/android/launcher3/DynamicGrid.java:            hotseat.setPadding(2 * edgeMarginPx + gridGap + hotseatGap, 0,
+./src/com/android/launcher3/DynamicGrid.java:                    2 * edgeMarginPx + gridGap + hotseatGap,
+./src/com/android/launcher3/DynamicGrid.java:            // For phones, layout the hotseat without any bottom margin
+./src/com/android/launcher3/DynamicGrid.java:            lp.height = hotseatBarHeightPx;
+./src/com/android/launcher3/DynamicGrid.java:            hotseat.findViewById(R.id.layout).setPadding(2 * edgeMarginPx, 0,
+./src/com/android/launcher3/DynamicGrid.java:        hotseat.setLayoutParams(lp);
+./src/com/android/launcher3/DynamicGrid.java:                // Hide the page indicators when we have vertical search/hotseat
+./src/com/android/launcher3/DynamicGrid.java:                // Put the page indicators above the hotseat
+./src/com/android/launcher3/DynamicGrid.java:                lp.bottomMargin = hotseatBarHeightPx;
+./src/com/android/launcher3/DynamicGrid.java:                ", hc: " + mProfile.numHotseatIcons + ", his: " + mProfile.hotseatIconSizePx + "]";
+./src/com/android/launcher3/FocusHelper.java: * A keyboard listener we set on all the hotseat buttons.
+./src/com/android/launcher3/FocusHelper.java:class HotseatIconKeyEventListener implements View.OnKeyListener {
+./src/com/android/launcher3/FocusHelper.java:        return FocusHelper.handleHotseatButtonKeyEvent(v, keyCode, event, configuration.orientation);
+./src/com/android/launcher3/FocusHelper.java:     * Handles key events in the workspace hotseat (bottom of the screen).
+./src/com/android/launcher3/FocusHelper.java:    static boolean handleHotseatButtonKeyEvent(View v, int keyCode, KeyEvent e, int orientation) {
+./src/com/android/launcher3/FocusHelper.java:        // orientations, even though the hotseat is on the side in landscape mode.  This
+./src/com/android/launcher3/FocusHelper.java:        final ViewGroup hotseat = (ViewGroup) launcher.findViewById(R.id.hotseat);
+./src/com/android/launcher3/FocusHelper.java:                    } else if (hotseat != null) {
+./src/com/android/launcher3/FocusHelper.java:                        hotseat.requestFocus();
+./src/com/android/launcher3/Launcher.java:    private Hotseat mHotseat;
+./src/com/android/launcher3/Launcher.java:        hideHotseat(false);                             //Added
+./src/com/android/launcher3/Launcher.java:        hideHotseat(false);                             //Added
+./src/com/android/launcher3/Launcher.java:        hideHotseat(false);                             //Added
+./src/com/android/launcher3/Launcher.java:        hideHotseat(false);                             //Added
+./src/com/android/launcher3/Launcher.java:        hideHotseat(false);                             //Added
+./src/com/android/launcher3/Launcher.java:        // Setup the hotseat
+./src/com/android/launcher3/Launcher.java:        mHotseat = (Hotseat) findViewById(R.id.hotseat);
+./src/com/android/launcher3/Launcher.java:        // if (mHotseat != null) {
+./src/com/android/launcher3/Launcher.java:        //     mHotseat.setup(this);
+./src/com/android/launcher3/Launcher.java:        //     mHotseat.setOnLongClickListener(this);
+./src/com/android/launcher3/Launcher.java:        hideHotseat(false);                             //Added
+./src/com/android/launcher3/Launcher.java:            showOutOfSpaceMessage(isHotseatLayout(layout));
+./src/com/android/launcher3/Launcher.java:            showOutOfSpaceMessage(isHotseatLayout(layout));
+./src/com/android/launcher3/Launcher.java:        hideHotseat(false);                             //Added
+./src/com/android/launcher3/Launcher.java:            showOutOfSpaceMessage(isHotseatLayout(layout));
+./src/com/android/launcher3/Launcher.java:    void showOutOfSpaceMessage(boolean isHotseatLayout) {
+./src/com/android/launcher3/Launcher.java:        int strId = (isHotseatLayout ? R.string.hotseat_out_of_space : R.string.out_of_space);
+./src/com/android/launcher3/Launcher.java:        if (info.container == LauncherSettings.Favorites.CONTAINER_HOTSEAT) {
+./src/com/android/launcher3/Launcher.java:        // The hotseat touch handling does not go through Workspace, and we always allow long press
+./src/com/android/launcher3/Launcher.java:        // on hotseat items.
+./src/com/android/launcher3/Launcher.java:        boolean allowLongPress = isHotseatLayout(v) || mWorkspace.allowLongPress();
+./src/com/android/launcher3/Launcher.java:    boolean isHotseatLayout(View layout) {
+./src/com/android/launcher3/Launcher.java:        return mHotseat != null && layout != null &&
+./src/com/android/launcher3/Launcher.java:                (layout instanceof CellLayout) && (layout == mHotseat.getLayout());
+./src/com/android/launcher3/Launcher.java:    Hotseat getHotseat() {
+./src/com/android/launcher3/Launcher.java:        return mHotseat;
+./src/com/android/launcher3/Launcher.java:        if (container == LauncherSettings.Favorites.CONTAINER_HOTSEAT) {
+./src/com/android/launcher3/Launcher.java:            if (mHotseat != null) {
+./src/com/android/launcher3/Launcher.java:                return mHotseat.getLayout();
+./src/com/android/launcher3/Launcher.java:        hideHotseat(false);                             //Added
+./src/com/android/launcher3/Launcher.java:        //showHotseat(animated);
+./src/com/android/launcher3/Launcher.java:        hideHotseat(false);                             //Added
+./src/com/android/launcher3/Launcher.java:        hideHotseat(false);                             //Added
+./src/com/android/launcher3/Launcher.java:     * Shows the hotseat area.
+./src/com/android/launcher3/Launcher.java:    void showHotseat(boolean animated) {
+./src/com/android/launcher3/Launcher.java:        //         if (mHotseat.getAlpha() != 1f) {
+./src/com/android/launcher3/Launcher.java:        //             mHotseat.animate().alpha(1f).setDuration(duration);
+./src/com/android/launcher3/Launcher.java:        //         mHotseat.setAlpha(1f);
+./src/com/android/launcher3/Launcher.java:     * Hides the hotseat area.
+./src/com/android/launcher3/Launcher.java:    void hideHotseat(boolean animated) {
+./src/com/android/launcher3/Launcher.java:                if (mHotseat.getAlpha() != 0f) {
+./src/com/android/launcher3/Launcher.java:                    mHotseat.animate().alpha(0f).setDuration(duration);
+./src/com/android/launcher3/Launcher.java:                mHotseat.setAlpha(0f);
+./src/com/android/launcher3/Launcher.java:            showOutOfSpaceMessage(isHotseatLayout(layout));
+./src/com/android/launcher3/Launcher.java:        if (mHotseat != null) {
+./src/com/android/launcher3/Launcher.java:            //mHotseat.resetLayout();
+./src/com/android/launcher3/Launcher.java:            if (item.container == LauncherSettings.Favorites.CONTAINER_HOTSEAT &&
+./src/com/android/launcher3/Launcher.java:                    mHotseat == null) {
+./src/com/android/launcher3/Launcher.java:                    getHotseat().addAllAppsFolder(mIconCache, apps,
+./src/com/android/launcher3/Launcher.java:    protected int getFirstRunFocusedHotseatAppDrawableId() {
+./src/com/android/launcher3/Launcher.java:    protected ComponentName getFirstRunFocusedHotseatAppComponentName() {
+./src/com/android/launcher3/Launcher.java:    protected int getFirstRunFocusedHotseatAppRank() {
+./src/com/android/launcher3/Launcher.java:    protected String getFirstRunFocusedHotseatAppBubbleTitle() {
+./src/com/android/launcher3/Launcher.java:    protected String getFirstRunFocusedHotseatAppBubbleDescription() {
+./src/com/android/launcher3/Launcher.java:            // Set the focused hotseat app if there is one
+./src/com/android/launcher3/Launcher.java:            c.setFocusedHotseatApp(getFirstRunFocusedHotseatAppDrawableId(),
+./src/com/android/launcher3/Launcher.java:                    getFirstRunFocusedHotseatAppRank(),
+./src/com/android/launcher3/Launcher.java:                    getFirstRunFocusedHotseatAppComponentName(),
+./src/com/android/launcher3/Launcher.java:                    getFirstRunFocusedHotseatAppBubbleTitle(),
+./src/com/android/launcher3/Launcher.java:                    getFirstRunFocusedHotseatAppBubbleDescription());
+./src/com/android/launcher3/LauncherProvider.java:                // Add default hotseat icons
+./src/com/android/launcher3/LauncherProvider.java:                    // Adjust hotseat format
+./src/com/android/launcher3/LauncherProvider.java:                        // if (info.container == LauncherSettings.Favorites.CONTAINER_HOTSEAT) {
+./src/com/android/launcher3/LauncherProvider.java:                        //     occupied.get((long) LauncherSettings.Favorites.CONTAINER_HOTSEAT)
